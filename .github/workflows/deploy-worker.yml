@@ -7,6 +7,7 @@ on:
       - ".github/workflows/deploy-worker.yml"
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -25,3 +26,9 @@ jobs:
           workingDirectory: zetra-store-releases-worker
           command: deploy
           wranglerVersion: "4.86.0"
+          secrets: |
+            GITHUB_TOKEN
+            WORKER_API_KEY
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASES_PAT }}
+          WORKER_API_KEY: ${{ secrets.WORKER_API_KEY }}
