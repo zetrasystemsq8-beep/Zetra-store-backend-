@@ -1,0 +1,7 @@
+name = "zetra-store-releases"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+GITHUB_OWNER = "zetrasystemsq8-beep"
+GITHUB_REPO = "Zetra-store-backend-"
