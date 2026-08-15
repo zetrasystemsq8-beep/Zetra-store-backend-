@@ -24,3 +24,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: zetra-store-releases-worker
           command: deploy
+          wranglerVersion: "4.86.0"
